@@ -1,0 +1,276 @@
+<html>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <div class="qr" onclick="start()">
+        QRを表示
+        <div class="qr2" id="QR"></div>
+        <div class="aa"id="aa">
+            <div class="b0" id="b0"></div>
+            <div class="b1" id="b1"></div>
+            <div class="b2" id="b2"></div>
+            <div class="b3" id="b3"></div>
+            <div class="b4" id="b4"></div>
+            <div class="b5" id="b5"></div>
+            <div class="b6" id="b6"></div>
+            <div class="b7" id="b7"></div>
+            <div class="b8" id="b8"></div>
+            <div class="b8" id="b9"></div>
+            <div class="b10" id="b10"></div>
+            <div class="b11" id="b11"></div>
+            <div class="b12" id="b12"></div>
+            <div class="b13" id="b13"></div>
+            <div class="b14" id="b14"></div>
+            <div class="b15" id="b15"></div>
+            <div class="b16" id="b16"></div>
+            <div class="b17" id="b17"></div>
+            <div class="b18" id="b18"></div>
+            <div class="b19" id="b19"></div>
+            <div class="b20" id="b20"></div>
+            <div class="b21" id="b21"></div>
+            <div class="b22" id="b22"></div>
+            <div class="b23" id="b23"></div>
+            <div class="b24" id="b24"></div>
+            <div class="b25" id="b25"></div>
+            <div class="b26" id="b26"></div>
+            <div class="b27" id="b27"></div>
+            <div class="b28" id="b28"></div>
+            <div class="b29" id="b29"></div>
+            <div class="b30" id="b30"></div>
+            
+        </div>
+    </div>
+    <style>
+        .qr {
+            position: absolute;
+            left: 40vw;
+            height: 30px;
+            width: 100px;
+            color: white;
+            border: 2px solid gray;
+            box-shadow: 0 0 5px 2px lightgray;
+            font-weight: 600;
+            text-align: center;
+            background-color: black;
+            border-radius: 15px;
+        }
+        .aa{
+            color:black;
+            width:5px;
+            height:auto;
+        }
+        .b1{
+            position:absolute;
+                        width:5px;
+            height:auto;
+        }
+        .b2{
+            position:absolute;
+            width:5px;
+            height:auto;
+        }
+        .b3{
+            position:absolute;
+            width:5px;
+            height:auto;
+        }
+        .b4{
+            position:absolute;
+            width:5px;
+            height:auto;
+        }
+        .b5{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+
+        .b6{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b7{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b8{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b9{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b10{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b11{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b12{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b13{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b14{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b15{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+
+        .b16{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b17{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b18{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b19{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+
+        .b20{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b21{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b22{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b23{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b24{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b25{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+
+        .b26{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b27{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b28{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b29{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+
+        .b30{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+        .b0{
+            width:5px;
+            height:auto;
+            position:absolute;
+        }
+    </style>
+    
+    <script>
+        c = 0;
+        function start() {
+            c++;
+            var qr = unescape("https://matsuoka18.github.io/foodshare/");
+            width = document.body.scrollWidth/2;
+height = 	document.documentElement.clientHeight;
+
+            for(var a = 0; a <= 30; a++){
+                b = "b"+a;
+                b2 = "#"+b;
+                min = Math.ceil(0);
+  max = Math.floor(height);
+  re =  Math.floor(Math.random() * (max - min) + min); 
+  min2 = Math.ceil(-width);
+  max2 = Math.floor(width);
+  re2 =  Math.floor(Math.random() * (max2 - min2) + min2); 
+  min3 = Math.ceil(1);
+  max3 = Math.floor(100);
+  re3 = Math.floor(Math.random() * (max3 - min3) + min3)
+  time = re3*10;
+  if(re3 <= 10 || re3 >=90){
+    info = 'linear'
+  }else if(10<re3<=30 || 70<=re3<90){
+    info = 'swing';
+  }else if(30<re3<=50){
+info = 'linear'
+  }else if(50<re3<70){
+    info = 'swing';
+  }
+                //data = "<div class="+b+"\""+ "id="+"\""+b+"></div>";
+               // aa.insertAdjacentHTML('beforeend', data);
+               if(c == 1){  $(b2).qrcode({ text: qr });
+            }
+              $(b2).animate({
+                'top':re,
+                'left':re2
+              },{
+                'duration':time,
+                'easing':info
+              });
+            
+        }
+if(c<100){
+    start();
+}
+        }
+    </script>
+
+</body>
+
+</html>

